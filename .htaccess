@@ -1,0 +1,18 @@
+RewriteEngine On
+RewriteBase /Jaziel/Venta/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*) index.php?/$1
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 147.135.4.72
+deny from 147.135.4.75
+deny from 147.135.4.77
+deny from 147.135.4.72/30
+deny from 147.135.4.76/31

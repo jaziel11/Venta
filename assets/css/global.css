@@ -1,0 +1,14 @@
+.oculto{
+    display: none;
+}
+.inicialMayuscula{
+    text-transform: capitalize !important;
+}
+
+.todasMayusculas{
+    text-transform: uppercase !important;
+}
+
+.todasMinusculas{
+    text-transform: lowercase !important;
+}
